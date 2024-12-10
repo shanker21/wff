@@ -116,7 +116,7 @@ define([
                                 dataType: 'json',
                                 success: function(data) {
                                     self.disableAddToCartButtonAction(form);
-                                    var popup = $('<div class="add-to-cart-modal-popup"/>').html($('.page-title span').text() + '<span>'+data.message+'</span>').modal({
+                                    var popup = $('<div class="add-to-cart-modal-popup"/>').text($('.page-title span').text() + ''+data.message).modal({
                                         modalClass: 'add-to-cart-popup',
                                         title: $.mage.__("We can't add this to your basket..."),
                                         responsive: true,
